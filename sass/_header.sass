@@ -1,0 +1,148 @@
+%button
+	+g(#49ac60,#289842)
+	border-radius: 4px
+	display: inline-block
+	color: #ffffff 
+	height: 26px 
+	line-height: 26px
+	text-decoration: none
+	cursor: pointer 
+	padding: 0 30px
+	font-size: 13px  
+	&:hover
+		+g(#49AC60,#49AC60)
+
+.header
+	height: 50px  // this is just placeholder for header
+	text-align: center
+	+r(step3)
+		height: 85px 
+	.header__logo
+		text-shadow: 1px 1px 0 #C2C2C2
+		text-decoration: none
+		text-transform: lowercase
+		color: #fff
+		font-size: 34px   
+		float: left
+		margin-top: 4px 
+		position: relative
+		z-index: 2 
+		line-height: 1 
+		+r(step3)
+			font-size: 20px 
+			padding-top: 5px 
+		i
+			+s(logosmall)
+			display: inline-block
+			vertical-align: middle
+			margin-right: 10px 
+		span
+			vertical-align: middle
+			display: inline-block
+	.header__top
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		padding: 0 2% 
+		+g(#EEEEEE,#DDDDDD)
+		+box-shadow(0 0 8px rgba(#000,0.5))
+		height: 50px    
+		z-index: 20
+		+r(step3)
+			height: 85px 
+	.user
+		float: right
+		padding: 12px 25px 0 0
+		position: relative
+		z-index: 2 
+
+	.header__createpollwrap
+		position: absolute
+		left: 0
+		right: 0
+		padding-top: 12px   
+		+r
+			position: static
+			float: left
+			margin-left: 10px 
+	.header__createpoll
+		@extend %button
+		+r(step3)
+			position: absolute
+			top: 50px 
+			left: 2%
+.user
+	text-align: right
+	.user__twitter,.user__facebook
+		display: inline-block
+		margin-left: 15px 
+		height: 24px 
+		line-height: 24px 
+		border-radius: 4px
+		border: 1px solid rgba(#7F8FA7,.6)
+		text-decoration: none
+		color: #fff 
+		padding: 0 11px 
+		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5) 
+		+r(step2)
+			display: none
+		&:hover
+			opacity: .7 
+		i
+			display: inline-block
+			position: relative
+			top: 2px 
+			margin-right: 6px 
+	.user__twitter
+		+g(#46C4F7,#2598CF)
+		i
+			+s(twitter)
+	.user__facebook
+		+g(#708bba,#435d8e)
+		i
+			+s(facebook)
+	.user__signup,.user__signin
+		color: #000
+		text-decoration: none
+		margin-left: 15px  
+		text-shadow: 0 1px 0 #fefefe
+		font-size: 15px 
+		+r(steplast)
+			font-size: 12px 
+			position: relative
+			top: 3px 
+		&:hover
+			color: #0293f3 
+.uplink
+	color: #fff
+	line-height: 20px
+	+bold
+	font-size: 20px
+	text-align: center
+	overflow: hidden
+	position: fixed
+	bottom: 200px
+	z-index: 9
+	background: #dddddd
+	padding: 10px
+	right: 0
+	text-decoration: none
+	opacity: .7
+	display: inline-block
+	+transition(all .1s linear)
+	&:hover
+		opacity: 1
+	i
+		+s(arrowup)
+		display: inline-block
+	span
+		display: block
+.submenu
+	position: relative
+	top: 50px 
+	left: 0 
+	z-index: 19 
+	+box-shadow(0 0 8px rgba(#000,0.5))
+	background: rgba(233, 233, 233, 0.95) 
+	

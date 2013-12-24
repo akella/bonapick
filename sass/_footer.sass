@@ -1,0 +1,63 @@
+.footer
+	background: #333333
+	padding: 20px  
+	+box-shadow(0 -1px 6px rgba(#000, 0.5))
+	+r(step3)
+		padding-top: 10px
+		padding-bottom: 10px 
+	.footer__in
+		padding: 10px 2%
+		+clr
+	.footer__right
+		float: right
+		width: 220px
+		text-align: right
+		+r(step3)
+			float: none
+			width: auto
+			text-align: center
+			margin-bottom: 13px 
+	.footer__nav
+		overflow: hidden
+		list-style: none
+		font-size: 14px
+		+r(step3)
+			text-align: center
+		li
+			display: inline-block 
+			margin-right: 40px 
+			+r(step2)
+				margin-right: 20px 
+		a
+			color: #888 
+			text-decoration: none
+	.footer__logo
+		+s(logo)
+		display: inline-block
+		vertical-align: top
+		+hidetext
+		opacity: .5
+		margin-bottom: 12px  
+		&:hover
+			opacity: 1
+	.footer__legal
+		font-size: 14px 
+		color: #888
+		text-align: center
+		clear: both
+		padding: 8px 0  
+.socials
+	list-style: none
+	li
+		display: inline-block
+		a
+			display: inline-block
+			margin-left: 20px 
+			+hidetext
+			opacity: .6 
+			&:hover
+				opacity: 1
+	@each $s in tw,fb,gp,pi
+		.socials__#{$s}
+			display: inline-block
+			+s(s#{$s})
